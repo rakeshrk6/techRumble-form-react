@@ -1,38 +1,290 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+html{
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(11, 11, 11);
+}
+h2{
+  color: rgb(0, 202, 213);
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
+  background-color: rgb(11, 11, 11);
+  width: 100%; 
+  box-shadow: 0 0 5px rgb(94, 94, 94);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  height: 70px;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  /* column-gap: 1rem; */
+}
+
+.nav-list{
+  display: flex;
+  column-gap: 2rem;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  display: flex;
+  text-decoration: none;
+  list-style: ;
+  color: rgb(201, 201, 201)
+}
+
+a:hover{
+  color: rgb(0, 202, 213);
+}
+.logo{
+  color: rgb(201, 201, 201);
+  font-size: 30px;
+}
+.menu-btn{
+  position: absolute;
+  color: rgb(201, 201, 201);
+  /* font-size: 40px; */
+  font-size: 2.1rem;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
+.form-container{
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 60px; */
+}
+
+.form-box{
+  display: flex;
+  margin-top: 90px;
+  flex-direction: column;
+  align-items: center;
+  width: 550px;
+  box-shadow: 0.5px 1px 5px rgb(94, 94, 94);
+  border-radius: 7px;
+}
+
+.form-content{
+ margin: 30px auto; 
+ 
+}
+form input,select{
+  display: flex;
+  width: 450px;
+  justify-self: center;
+  height: 45px;
+  margin: 5px 0 20px 0;
+  background-color: rgb(26, 26, 26);
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 5px;
+  color: rgb(201, 201, 201);
+  padding-left: 15px;
+}
+
+label{
+  color: rgb(201, 201, 201);
+  font-size: 14px;
+}
+
+/* EMAIL BOX */
+.bottom-container{
+  width: 100%;
+  border-top: 1px solid rgb(138, 138, 138);
+  border-bottom: 1px solid rgb(138, 138, 138);
+  padding: 30px 52px;
+}
+
+.email-box h3{
+  font-size: 20px;
+  color: rgb(0, 202, 213);
+  font-weight: 300;
+}
+
+.email-box p{
+  font-size: 14px;
+  color: rgb(201, 201, 201);
+}
+
+/* BUTTON */
+.button-box{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0;
+}
+
+.btn{
+  background-color: rgb(10, 67, 166);
+  width: 80%;
+  color: white;
+  padding: 12px;
+  border-radius: 2rem;
+  border: 2.5px solid rgb(51, 197, 255);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: rgb(0, 48, 131);
+}
+
+.footer{
+  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(20, 20, 20);
+  color: whitesmoke;
 }
 
-.App-link {
-  color: #61dafb;
+.footer h2{
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer h3{
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.footer span{
+  color: rgb(212, 10, 10);
+}
+
+/* FOR LARGE SCRREN */
+@media screen and (max-width: 1011px) {
+  .container{
+    max-width: 680px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form-box{
+    width: 460px;
+  }
+
+  form input,select{
+    width: 360px;
+  }
+  
+}
+
+/* FOR MEDIUM SCRREN */
+@media screen and (max-width: 720px) {
+  .container{
+    max-width: 480px;
+  }
+
+  .form-box{
+    width: 400px;
+  }
+
+  form input,select{
+    width: 350px;
+  }
+
+  .nav-list{
+    display: none;
+  }
+  .menu-btn{
+    display: flex;
+    position: fixed;
+    color: rgb(201, 201, 201);
+    font-size: 2.1rem;
+    right: 25px;
+    top: 19px;
+  }
+
+  .email-box{
+    padding-left: 29px ;
   }
 }
+
+/* FOR SMALL SCREEN */
+@media screen and (max-width: 350px) {
+  .container{
+    max-width: 300px;
+  }
+
+  .form-box{
+    width: 290px;
+  }
+
+  form input,select{
+    width: 250px;
+    height: 40px;
+  }
+
+  h2{
+    font-size: 19px;
+  }
+
+  .email-box h3{
+    font-size: 15px;
+  }
+
+  .email-box p{
+    font-size: 11px;
+  }
+
+  label{
+    font-size: 13px;
+  }
+
+  .btn{
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .logo{
+    font-size: 25px;
+  }
+
+  .email-box{
+    padding-left: 23px ;
+  }
+
+  .menu-btn{
+    right: 15px;
+  }
+
+  .footer h2{
+    font-size: 13px;
+  }
+  
+  .footer h3{
+    font-size: 9px;
+    font-weight: 400;
+  }
+
+  .footer{
+    height: 120px;
+  }
+}
+
