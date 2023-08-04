@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/techRumble-form-react/static/css/main.6f6a794f.css",
+    "main.js": "/techRumble-form-react/static/js/main.5fbff0c6.js",
+    "index.html": "/techRumble-form-react/index.html",
+    "main.6f6a794f.css.map": "/techRumble-form-react/static/css/main.6f6a794f.css.map",
+    "main.5fbff0c6.js.map": "/techRumble-form-react/static/js/main.5fbff0c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f6a794f.css",
+    "static/js/main.5fbff0c6.js"
+  ]
+}
